@@ -1,0 +1,22 @@
+.container {
+    display: inline-flex;
+    border-radius: 10px;
+    margin-left: 90vh;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.btn {
+    border: 2px solid black;
+    color: white;
+    display: inline-flex;
+    background-color: grey;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+}
