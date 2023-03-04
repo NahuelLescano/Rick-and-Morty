@@ -1,10 +1,28 @@
+@font-face {
+    font-family: Rick-and-Morty;
+    src: url("./font/MISFITS_.TTF");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: Rick-and-Morty,
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./img/rick-and-morty.webp");
+  min-height: 80vh;
+  min-width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  width: 99%;
+  height: 97vh;
 }
 
 code {

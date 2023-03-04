@@ -5,20 +5,15 @@ import characters from './data.js';
 
 function App () {
   return (
-    <div className='App' style={{ padding: '25px' }}>
-    <div>
-      <SearchBar
-        onSearch={characterID => alert(characterID)}
-      />
-    </div>
-
-     <hr />
+    <div className='App'>
+     <SearchBar
+       onSearch={characterID => alert(characterID)}
+     />
       <div>
         <Cards
           characters={characters}
         />
       </div>
-      <hr />
    </div>
   );
 }

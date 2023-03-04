@@ -1,16 +1,38 @@
-.container {
-    display: inline-flex;
+.main {
+    display: flex;
+    text-decoration: none;
+    width: 101%;
+    height: 55%;
+    margin: 0;
+    position: relative;
+    background-color: orange;
+    padding: 4px;
+}
+
+.main h1 {
+    color: brown;
+}
+
+.input {
+    display: flex;
     border-radius: 10px;
-    margin-left: 90vh;
-    padding-bottom: 10px;
-    margin-bottom: 5px;
+}
+
+.container {
+    background-color: orange;
+    display: flex;
+    border-radius: 10px;
+    margin-left: 74%;
+    margin-top: 3%;
+    height: 35%;
+    position: absolute;
 }
 
 .btn {
     border: 2px solid black;
     color: white;
     display: inline-flex;
-    background-color: grey;
+    background-color: #4B5F80;
     border-radius: 10px;
     font-size: 18px;
 }

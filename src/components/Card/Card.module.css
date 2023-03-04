@@ -1,19 +1,23 @@
-@font-face {
-    font-family: Rick-and-Morty;
-    src: url("../../font/MISFITS_.TTF");
-}
-
 .card {
-    border: 2px solid grey;
     background-color: orange;
-    font-family: Rick-and-Morty;
+    border: 2px solid #344259;
     display: flex;
     flex-direction: column;
     align-content: center;
     border-radius: 15px;
     justify-content: center;
     align-items: center;
+    transition: .7s;
+    transform: translateY(10px);
+    min-height: 20vh;
     margin-top: 5px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.card:hover{
+    transform: translateY(0px);
+    cursor: pointer;
 }
 
 .card h2 {
@@ -24,9 +28,11 @@
     background-color: red;
     color: white;
     width: 25px;
+    margin-bottom: 153%;
+    margin-right: 2%;
     border-radius: 7px;
-    margin: 6px;
     align-self: flex-end;
+    position: absolute;
 }
 
 .btn:hover {
@@ -36,8 +42,8 @@
 }
 
 img {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
 .card-tittle h1 {
