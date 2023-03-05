@@ -1,21 +1,45 @@
-import './App.css';
+import { useState } from 'react';
 import Cards from './components/Cards/Cards.jsx';
-import SearchBar from './components/SearchBar/SearchBar.jsx';
-import characters from './data.js';
+import NavBar from './components/NavBar/NavBar.jsx'
+import './App.css';
 
-function App () {
+const URL = 'https://rickandmortyapi.com/api/character/';
+
+export default function App () {
+  const [characters, setCharacters] = useState([]);
+  const onSearch = character => {
+    fetch(`${URL}${character}`)
+      .then(response => response.json())
+      .then(data => {
+        if (characters.some(character => character.id === data.id))
+          alert('This character has already been added.');
+        else if(data.name)
+          setCharacters([...characters, data]);
+        else
+          alert('There are not characters with this id.');
+      });
+  };
+
+  const onClose = id => {
+    setCharacters(characters.filter(character => character.id !== id));
+  }
+
+  //const getRandomCharacters = () => {
+  //  let randomNumber = Math.floor(Math.random() * Math.abs(characters.length - 826))
+  //  setCharacters(characters[randomNumber]);
+  //}
+
   return (
     <div className='App'>
-     <SearchBar
-       onSearch={characterID => alert(characterID)}
+     <NavBar
+       onSearch={onSearch}
      />
       <div>
         <Cards
           characters={characters}
+          onClose={onClose}
         />
       </div>
    </div>
   );
 }
-
-export default App

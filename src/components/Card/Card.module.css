@@ -2,6 +2,7 @@
     background-color: orange;
     border: 2px solid #344259;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
     border-radius: 15px;
@@ -12,7 +13,6 @@
     min-height: 20vh;
     margin-top: 5px;
     position: relative;
-    flex-wrap: wrap;
 }
 
 .card:hover{
