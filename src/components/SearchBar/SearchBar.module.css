@@ -7,19 +7,19 @@
     background-color: orange;
     display: flex;
     border-radius: 10px;
-    margin-left: 74%;
-    margin-top: 3%;
-    height: 35%;
+    margin-top: 1%;
+    margin-left: 67%;
+    height: 50%;
     position: absolute;
 }
 
 .btn {
-    border: 2px solid black;
-    color: white;
-    display: inline-flex;
     background-color: #4B5F80;
+    color: white;
+    border: 2px solid black;
+    display: inline-flex;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .btn:hover {

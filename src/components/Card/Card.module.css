@@ -1,3 +1,4 @@
+/* Note: bug in images don't fit cards correctly*/
 .card {
     background-color: orange;
     border: 2px solid #344259;
@@ -10,7 +11,8 @@
     align-items: center;
     transition: .7s;
     transform: translateY(10px);
-    min-height: 20vh;
+    height: 70vh;
+    width: 330px;
     margin-top: 5px;
     position: relative;
 }
@@ -42,6 +44,8 @@
 }
 
 img {
+    margin: 0;
+    padding: 0;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }

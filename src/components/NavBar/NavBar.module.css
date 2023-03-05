@@ -10,7 +10,11 @@
     padding: 4px;
 }
 
-.container h1 {
-    color: brown;
-    font-weight: bold;
+.container :link {
+    font-size: 30px;
+    display: inline-flex;
+    margin-left: 5px;
+    padding-top: 4px;
+    padding-left: 10px;
+    justify-content: center;
 }
