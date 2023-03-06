@@ -2,21 +2,48 @@
 .card {
     background-color: orange;
     border: 2px solid #344259;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-    border-radius: 15px;
-    justify-content: center;
-    align-items: center;
     transition: .7s;
     transform: translateY(10px);
     height: 70vh;
     width: 330px;
-    margin-top: 5px;
-    position: relative;
+    margin-top: 20px;
+    margin-left: 5px;
+    border-radius: 12px;
+    padding-bottom: 5px;
+}
+.containerImg{
+  position: relative;
+  border-top-left-radius: 12px;
+  border-top-right-radius:12px ;
+}
+.btn {
+  position: absolute;
+  background-color: red;
+  color: white;
+  width: 25px;
+  margin-right: 2%;
+  border-radius: 7px;
+  align-self: flex-end;
+  margin: 6px;
 }
 
+.btn:hover {
+  background-color: white;
+  color: red;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.containerInfo{
+  
+}
 .card:hover{
     transform: translateY(0px);
     cursor: pointer;
@@ -26,29 +53,6 @@
     color: brown;
 }
 
-.btn {
-    background-color: red;
-    color: white;
-    width: 25px;
-    margin-bottom: 153%;
-    margin-right: 2%;
-    border-radius: 7px;
-    align-self: flex-end;
-    position: absolute;
-}
-
-.btn:hover {
-    background-color: white;
-    color: red;
-    cursor: pointer;
-}
-
-img {
-    margin: 0;
-    padding: 0;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-}
 
 .card-tittle h1 {
     text-decoration: none;
