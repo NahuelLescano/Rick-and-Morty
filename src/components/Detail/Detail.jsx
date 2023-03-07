@@ -22,16 +22,15 @@ export default function Detail() {
     <div>
       {character &&
        <div className={Styles.container}>
-         <div className={Styles.img}>
-           <img
-             src={character.image}
-             alt={character.name}
-           />
-           <button
-             onClick={() => navigate('/home')}
-             className={Styles.btn}
-           >Back</button>
-         </div>
+         <img
+           src={character.image}
+           alt={character.name}
+           className={Styles.img}
+         />
+         <button
+           onClick={() => navigate('/home')}
+           className={Styles.btn}
+         >Back</button>
          <h1>Name: {character.name}</h1>
          <h2>Status: {character.status}</h2>
          <h2>Specie: {character.specie}</h2>
