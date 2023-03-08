@@ -4,7 +4,8 @@
     justify-items: center;
     margin-top: 9%;
     background-color: #6A84BD;
-    border: 1px solid black;
+    border: 1.4px solid black;
+    border-radius: 10px;
     opacity: 0.85;
 }
 
