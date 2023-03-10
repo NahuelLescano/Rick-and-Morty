@@ -44,7 +44,7 @@ export default function Form({ login, logout }) {
             id='username'
             name='username'
             placeholder='Enter your username'
-            type='text'
+            type='email'
             value={userData.username}
             onChange={handleInputChange}
             className={errors.username && Styles.warning}
