@@ -8,9 +8,15 @@ export default function NavBar({ onSearch, logout }) {
     <div className={Styles.container}>
       <NavLink to='/home'
                activeclassname='active'>Rick and Morty</NavLink>
+
       <NavLink to='/about'
                activeclassname='active'>About me</NavLink>
-      <SearchBar onSearch={onSearch}/>
+
+      <NavLink to='/favorites'
+               activeclassname='active'>Favorites</NavLink>
+
+      <SearchBar onSearch={onSearch} />
+
       <button
         className={Styles.button}
         onClick={() => logout()}>

@@ -6,6 +6,7 @@ import NavBar from './components/NavBar/NavBar.jsx'
 import About from './components/About/About.jsx';
 import Detail from './components/Detail/Detail.jsx';
 import Form from './components/Form/Form.jsx';
+import Favorites from './components/Favorites/Favorites.jsx';
 import './App.css';
 
 
@@ -76,6 +77,11 @@ export default function App () {
         <Route
           path='/about'
           element={<About />}
+        />
+
+        <Route
+          path='/favorites'
+          element={<Favorites />}
         />
 
         <Route

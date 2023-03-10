@@ -23,7 +23,28 @@
 .containerImg {
     position: relative;
     border-top-left-radius: 12px;
-    border-top-right-radius:12px ;
+    border-top-right-radius: 12px ;
+}
+
+.fav {
+    color: red;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: .4s;
+    transform: translateY(2px);
+}
+
+.noFav {
+    color: #0E0E0E;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    transition: .4s;
+}
+
+.fav:hover {
+    transform: translateY(0);
 }
 
 .btn {
