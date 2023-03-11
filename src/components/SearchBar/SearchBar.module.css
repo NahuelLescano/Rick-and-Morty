@@ -13,17 +13,19 @@
     position: absolute;
 }
 
-.btn {
-    background-color: #4B5F80;
+.button {
+    width: 7vh;
+    background-color: #003D7F;
     color: white;
-    border: 2px solid black;
-    display: inline-flex;
+    border: none;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 20px;
+    font-family: rick-and-morty;
+    cursor: pointer;
+    transition: background-color .3s ease;
 }
 
-.btn:hover {
-    cursor: pointer;
+.button:hover {
     color: black;
     background-color: white;
 }
