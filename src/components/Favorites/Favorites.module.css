@@ -1,0 +1,25 @@
+.container {
+    background-color: #005b96;
+    color: white;
+    display: inline-flex;
+    border: 1px solid grey;
+    column-gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin-top: 4px;
+}
+
+.title {
+    color: blueviolet;
+}
+
+.img {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}

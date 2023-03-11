@@ -1,15 +1,19 @@
 import { connect } from 'react-redux';
-// Note: add styling...
+import Styles from './Favorites.module.css';
+
 export function Favorites({ myFavorites }) {
   console.log(myFavorites);
   return (
     <div>
-      <h1>Favorites:</h1>
+      <h1 className={Styles.title}>Favorites:</h1>
       {(myFavorites.length !== 0) ? myFavorites.map(fav => (
-      <div key={fav.id}>
+      <div
+        className={Styles.container}
+        key={fav.id}>
         <img
           src={fav.image}
           alt={fav.id}
+          className={Styles.img}
         />
         <h2>name: {fav.name}</h2>
         <h3>Species: {fav.species}</h3>
