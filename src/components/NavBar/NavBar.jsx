@@ -7,13 +7,13 @@ export default function NavBar({ onSearch, logout }) {
   return (
     <div className={Styles.container}>
       <NavLink to='/home'
-               activeclassname='active'>Rick and Morty</NavLink>
+               className={({ isActive }) => isActive ? Styles.active : Styles.disable}>Rick and Morty</NavLink>
 
       <NavLink to='/about'
-               activeclassname='active'>About me</NavLink>
+               className={({ isActive }) => isActive ? Styles.active : Styles.disable}>About me</NavLink>
 
       <NavLink to='/favorites'
-               activeclassname='active'>Favorites</NavLink>
+               className={({ isActive }) => isActive ? Styles.active : Styles.disable}>Favorites</NavLink>
 
       <SearchBar onSearch={onSearch} />
 

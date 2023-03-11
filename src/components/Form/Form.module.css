@@ -2,13 +2,13 @@
     display: inline-flex;
     max-width: 400px;
     margin-top: 15%;
+    font-size: 1.3em;
     padding: 20px;
     border: 1px solid #3D3D3D;
     border-radius: 10px;
     background-color: #6E6E6E;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     opacity: 0.85;
-
 }
 
 form {
@@ -25,9 +25,9 @@ label {
     margin-bottom: 5px;
 }
 
-input[type='text'], input[type='password'] {
+input[type='email'], input[type='password'] {
     padding: 10px;
-    border: 2px solid 3D3D3D;
+    border: 2px solid #3D3D3D;
     border-radius: 5px;
     background-color: white;
     font-size: 0.8em;

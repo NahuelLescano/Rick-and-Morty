@@ -40,10 +40,11 @@ export default function Form({ login, logout }) {
       <form onSubmit={handleSubmit}>
         <div className={Styles.formGroup}>
           <label htmlFor='username'>Username: </label>
+          <br/>
           <input
             id='username'
             name='username'
-            placeholder='Enter your username'
+            placeholder='Enter your email'
             type='email'
             value={userData.username}
             onChange={handleInputChange}
@@ -54,6 +55,7 @@ export default function Form({ login, logout }) {
 
         <div className={Styles.formGroup}>
           <label htmlFor='password'>Password: </label>
+          <br/>
           <input
             id='password'
             name='password'

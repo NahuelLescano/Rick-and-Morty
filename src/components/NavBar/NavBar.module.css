@@ -1,16 +1,16 @@
 .container {
     display: flex;
     text-decoration: none;
-    width: 100.5%;
-    height: 55%;
+    width: 101%;
+    height: 65%;
     margin: 0;
     padding: 0;
     position: relative;
     background-color: orange;
-    padding: 4px;
 }
 
 .container :link {
+    text-decoration: none;
     font-size: 30px;
     display: inline-flex;
     margin-left: 5px;
@@ -21,6 +21,7 @@
 
 .button {
     width: 4%;
+    margin-left: 20%;
     border: none;
     border-radius: 5px;
     background-color: #003D7F;
@@ -32,4 +33,19 @@
 .button:hover {
     background-color: white;
     color: #003D7F;
+}
+
+.active {
+    color: purple;
+    font-weight: bold;
+    transition: .2s;
+
+}
+
+.active:hover {
+    background-color: grey;
+}
+
+.disable {
+    color: blue;
 }

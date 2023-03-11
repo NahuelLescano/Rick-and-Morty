@@ -12,7 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("./img/rick-and-morty.webp");
-  min-height: 80vh;
+  min-height: 100vh;
   min-width: 100%;
   background-size: cover;
   background-position: center;

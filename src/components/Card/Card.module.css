@@ -28,6 +28,7 @@
 
 .fav {
     position: absolute;
+    border-radius: 10px;
     z-index: 2;
     color: red;
     border: none;
@@ -39,6 +40,7 @@
 
 .noFav {
     position: absolute;
+    border-radius: 10px;
     z-index: 2;
     color: #0E0E0E;
     border: none;

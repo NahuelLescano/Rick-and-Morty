@@ -5,9 +5,9 @@ import { useEffect, useState } from 'react';
 import { addFav, removeFav } from '../../redux/actions/actions';
 import Styles from './Card.module.css';
 
-export function Card({ id, name, species,
-                       genre, image, onClose,
-                       addFav, removeFav, myFavorites }) {
+export function Card({ id, name, species, image, gender,
+                       onClose, addFav, removeFav,
+                       myFavorites }) {
   const [isFav, setIsFav] = useState(false);
 
   const handleFavorite = () => {
@@ -16,9 +16,9 @@ export function Card({ id, name, species,
       removeFav(id);
     } else {
       setIsFav(true);
-      addFav({ id, name, species, genre, image, onClose });
+      addFav({ id, name, species, image, gender, onClose });
     }
-  }
+  };
 
   useEffect(() => {
     myFavorites.forEach(fav => {
@@ -50,7 +50,7 @@ export function Card({ id, name, species,
           <h2>{name}</h2>
         </Link>
         <h2>{species}</h2>
-        <h2>{genre}</h2>
+        <h2>{gender}</h2>
       </div>
     </div>
   );

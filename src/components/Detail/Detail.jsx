@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Styles from './Detail.module.css';
+
 const URL = 'https://rickandmortyapi.com/api/character/';
 
 export default function Detail() {
@@ -24,7 +25,7 @@ export default function Detail() {
        <div className={Styles.container}>
          <img
            src={character.image}
-           alt={character.name}
+           alt={character.id}
            className={Styles.img}
          />
          <button
@@ -33,7 +34,7 @@ export default function Detail() {
          >Back</button>
          <h1>Name: {character.name}</h1>
          <h2>Status: {character.status}</h2>
-         <h2>Specie: {character.specie}</h2>
+         <h2>Species: {character.species}</h2>
          <h2>Gender: {character.gender}</h2>
          <h2>Origin: {character.origin?.name}</h2>
        </div>
