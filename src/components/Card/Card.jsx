@@ -34,16 +34,16 @@ export function Card({ id, name, species,
           onClick={onClose}
         >X</button>
         <img src={image} alt={id} className={Styles.img} />
+        {(isFav) ? (
+            <button
+              className={Styles.fav}
+              onClick={handleFavorite}>❤</button>
+              ) : (
+            <button
+              className={Styles.noFav}
+              onClick={handleFavorite}>❤︎</button>
+          )}
       </div>
-      {(isFav) ? (
-          <button
-            className={Styles.fav}
-            onClick={handleFavorite}>❤</button>
-            ) : (
-          <button
-            className={Styles.noFav}
-            onClick={handleFavorite}>❤︎</button>
-        )}
 
       <div>
         <Link to={`/detail/${id}`}>

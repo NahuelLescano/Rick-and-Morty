@@ -27,20 +27,25 @@
 }
 
 .fav {
+    position: absolute;
+    z-index: 2;
     color: red;
     border: none;
     cursor: pointer;
     font-size: 20px;
     transition: .4s;
-    transform: translateY(2px);
+    margin-left: -30px;
 }
 
 .noFav {
+    position: absolute;
+    z-index: 2;
     color: #0E0E0E;
     border: none;
     cursor: pointer;
     font-size: 12px;
     transition: .4s;
+    margin-left: -30px;
 }
 
 .fav:hover {
