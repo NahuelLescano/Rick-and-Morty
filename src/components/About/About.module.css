@@ -6,7 +6,7 @@
     background-color: #6A84BD;
     border: 1.4px solid black;
     border-radius: 10px;
-    opacity: 0.85;
+    opacity: 0.89;
 }
 
 container p {
@@ -18,4 +18,31 @@ container p {
 .container h1 {
     text-decoration: blue underline;
     font-size: 40px;
+}
+
+.image {
+    border-radius: 40%;
+    padding: 5px;
+    width: 150px;
+    margin-left: 35%;
+}
+
+.image:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
 }
