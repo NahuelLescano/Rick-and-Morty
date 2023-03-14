@@ -23,3 +23,24 @@
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }
+
+.order {
+    font-size: 1.3em;
+    padding-right: 10px;
+    color: blue;
+}
+
+.inputOrder {
+    margin-right: 20%;
+    border-radius: 4px;
+}
+
+.filter {
+    font-size: 1.3em;
+    padding-right: 10px;
+    color: blue;
+}
+
+.inputFilter {
+    border-radius: 4px;
+}

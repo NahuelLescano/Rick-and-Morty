@@ -1,4 +1,4 @@
-import { ADD_FAV, REMOVE_FAV } from './types';
+import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from './types';
 
 export const addFav = character => {
   return {
@@ -14,3 +14,17 @@ export const removeFav = id => {
   };
 };
 
+export const filterCards = gender => {
+  return {
+    type: FILTER,
+    payload: gender,
+  };
+};
+
+// A => ascending, D => descending
+export const orderCards = order => {
+  return {
+    type: ORDER,
+    payload: order,
+  };
+};
