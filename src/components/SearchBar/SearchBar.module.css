@@ -1,10 +1,11 @@
 .input {
     display: flex;
+    border: none;
+    outline: none;
     border-radius: 10px;
 }
 
 .container {
-    background-color: orange;
     display: flex;
     border-radius: 10px;
     margin-top: 1%;
@@ -25,7 +26,8 @@
     transition: background-color .3s ease;
 }
 
+
 .button:hover {
-    color: black;
     background-color: white;
+    color: #003D7F;
 }

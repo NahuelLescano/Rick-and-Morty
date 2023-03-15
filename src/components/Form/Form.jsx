@@ -36,42 +36,48 @@ export default function Form({ login, logout }) {
   }
 
   return (
-    <div className={Styles.container}>
-      <form onSubmit={handleSubmit}>
-        <div className={Styles.formGroup}>
-          <label htmlFor='username'>Username: </label>
-          <br/>
-          <input
-            id='username'
-            name='username'
-            placeholder='Enter your email'
-            type='email'
-            value={userData.username}
-            onChange={handleInputChange}
-            className={errors.username && Styles.warning}
-          />
-          <p className={Styles.danger}>{errors.username}</p>
-        </div>
+    <section>
+      <div className={Styles.formBox}>
+        <form onSubmit={handleSubmit}>
+          <div className={Styles.formGroup}>
+            <h2>Welcome back!</h2>
+            <div className={Styles.inputBox}>
+              <ion-icon name="mail-outline"></ion-icon>
+              <label htmlFor='username'>Email: </label>
+                <input
+                  id='username'
+                  name='username'
+                  type='email'
+                  value={userData.username}
+                  onChange={handleInputChange}
+                  className={errors.username && Styles.warning}
+                  required />
+                <p className={Styles.danger}>{errors.username}</p>
+            </div>
+          </div>
 
-        <div className={Styles.formGroup}>
-          <label htmlFor='password'>Password: </label>
-          <br/>
-          <input
-            id='password'
-            name='password'
-            placeholder='Enter your password'
-            type='password'
-            value={userData.password}
-            onChange={handleInputChange}
-            className={errors.password && Styles.warning}
-          />
-          <p className={Styles.danger}>{errors.password}</p>
+          <div className={Styles.formGroup}>
+            <div className={Styles.inputBox}>
+              <ion-icon name="lock-closed-outline"></ion-icon>
+              <label htmlFor='password'>Password: </label>
+                <input
+                  id='password'
+                  name='password'
+                  type='password'
+                  value={userData.password}
+                  onChange={handleInputChange}
+                  className={errors.password && Styles.warning} />
+                <p className={Styles.danger}>{errors.password}</p>
+            </div>
+          </div>
+
+          <button
+            type='submit'
+            className={Styles.button} >
+            Login
+          </button>
+          </form>
         </div>
-        <button
-          type='submit'
-          className={Styles.button}
-        >Login</button>
-      </form>
-    </div>
+    </section>
   );
 }

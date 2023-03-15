@@ -2,16 +2,17 @@
     display: flex;
     text-decoration: none;
     width: 101%;
-    height: 65%;
+    height: 80%;
     margin: 0;
     padding: 0;
     position: relative;
-    background-color: orange;
+    backdrop-filter: blur(15px);
+    background: transparent;
 }
 
 .container :link {
     text-decoration: none;
-    font-size: 30px;
+    font-size: 1.8em;
     display: inline-flex;
     margin-left: 5px;
     padding-top: 4px;
@@ -23,6 +24,7 @@
     width: 4%;
     margin-left: 20%;
     border: none;
+    outline: none;
     border-radius: 10px;
     background-color: #003D7F;
     color: white;
@@ -41,13 +43,16 @@
     color: purple;
     font-weight: bold;
     transition: .2s;
-
 }
 
 .active:hover {
-    background-color: grey;
+    text-decoration: underline;
 }
 
 .disable {
     color: blue;
+}
+
+.disable:hover {
+    background-color: #939393;
 }

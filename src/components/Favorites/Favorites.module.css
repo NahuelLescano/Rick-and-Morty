@@ -1,18 +1,19 @@
 .container {
-    background-color: #005b96;
     color: white;
     display: inline-flex;
-    border: 1px solid grey;
+    border: 2px solid grey;
     column-gap: 10px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
     margin-top: 4px;
+    backdrop-filter: blur(15px);
+    background: transparent;
 }
 
 .title {
-    color: blueviolet;
+    color: darkblue;
 }
 
 .img {

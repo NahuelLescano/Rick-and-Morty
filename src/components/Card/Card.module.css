@@ -1,7 +1,7 @@
 .card {
-    background-color: orange;
+    background: transparent;
     border: 2px solid #344259;
-    transition: .7s;
+    transition: .5s;
     transform: translateY(10px);
     height: 70vh;
     width: 330px;
@@ -9,11 +9,11 @@
     margin-left: 5px;
     border-radius: 12px;
     padding-bottom: 5px;
+    backdrop-filter: blur(15px);
 }
 
 .card :link {
   text-decoration: wavy underline;
-  cursor: pointer;
 }
 
 .card:hover {
@@ -23,7 +23,7 @@
 .containerImg {
     position: relative;
     border-top-left-radius: 12px;
-    border-top-right-radius: 12px ;
+    border-top-right-radius: 12px;
 }
 
 .fav {
@@ -54,7 +54,7 @@
     transform: translateY(0);
 }
 
-.btn {
+.button {
     position: absolute;
     background-color: red;
     color: white;
@@ -63,15 +63,16 @@
     border-radius: 7px;
     align-self: flex-start;
     margin: 6px;
+    transition: background-color .3s ease;
 }
 
-.btn:hover {
+.button:hover {
     background-color: white;
     color: red;
     cursor: pointer;
 }
 
-.img {
+.image {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -80,9 +81,5 @@
 }
 
 .card h2 {
-    color: brown;
-}
-
-.card-tittle h1 {
-    text-decoration: none;
+    color: darkblue;
 }

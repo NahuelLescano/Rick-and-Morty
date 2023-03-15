@@ -1,5 +1,5 @@
 .container {
-    background-color: #005b96;
+    background: transparent;
     color: white;
     display: inline-flex;
     flex-direction: column;
@@ -7,6 +7,7 @@
     justify-content: center;
     border-radius: 20px;
     margin-top: 4px;
+    backdrop-filter: blur(15px);
 }
 
 .info {
@@ -18,23 +19,25 @@
     margin-right: 4px;
 }
 
-.btn {
+.button {
     font-family: Rick-and-Morty;
     font-size: 19px;
     width: 20%;
     margin: 5%;
-    background-color: skyblue;
-    color: darkblue;
-    border-radius: 10px;
-}
-
-.btn:hover {
-    color: red;
-    background-color: white;
+    background-color: #003D7F;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 15px;
     cursor: pointer;
 }
 
-.img {
+.button:hover {
+    background-color: white;
+    color: #003D7F;
+}
+
+.image {
     width: 100%;
     margin: 0;
     padding: 0;

@@ -30,10 +30,10 @@ export function Card({ id, name, species, image, gender,
     <div className={Styles.card}>
       <div className={Styles.containerImg}>
         <button
-          className={Styles.btn}
+          className={Styles.button}
           onClick={onClose}
         >X</button>
-        <img src={image} alt={id} className={Styles.img} />
+        <img src={image} alt={id} className={Styles.image} />
         {(isFav) ? (
             <button
               className={Styles.fav}

@@ -26,11 +26,11 @@ export default function Detail() {
          <img
            src={character.image}
            alt={character.id}
-           className={Styles.img}
+           className={Styles.image}
          />
          <button
            onClick={() => navigate('/home')}
-           className={Styles.btn}
+           className={Styles.button}
          >Back</button>
          <h1>Name: {character.name}</h1>
          <h2>Status: {character.status}</h2>
