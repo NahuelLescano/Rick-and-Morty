@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Styles from './Form.module.css';
 import Validation from './Validation.js';
 
-export default function Form({ login, logout }) {
+export default function Form({ login }) {
   const [userData, setUserData] = useState({
     username: '',
     password: '',
@@ -66,7 +66,8 @@ export default function Form({ login, logout }) {
                   type='password'
                   value={userData.password}
                   onChange={handleInputChange}
-                  className={errors.password && Styles.warning} />
+                  className={errors.password && Styles.warning}
+                  required />
                 <p className={Styles.danger}>{errors.password}</p>
             </div>
           </div>

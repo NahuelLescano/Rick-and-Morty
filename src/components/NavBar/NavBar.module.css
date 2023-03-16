@@ -2,10 +2,12 @@
     display: flex;
     text-decoration: none;
     width: 101%;
-    height: 80%;
     margin: 0;
     padding: 0;
-    position: relative;
+    padding-bottom: 4px;
+    position: fixed;
+    top: 0%;
+    z-index: 100;
     backdrop-filter: blur(15px);
     background: transparent;
 }

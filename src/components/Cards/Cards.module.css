@@ -3,6 +3,7 @@
     grid-template-columns: repeat(3, 0.5fr);
     grid-gap: 10px;
     margin-left: 10%;
+    margin-top: 30px;
     position: relative;
     z-index: 1;
 }

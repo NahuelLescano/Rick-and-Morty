@@ -48,7 +48,7 @@ export default function App () {
         if (characters.some(character => character.id === data.id))
           alert('This character has already been added.');
         else if(data.name)
-          setCharacters([...characters, data]);
+          setCharacters([data, ...characters]);
         else
           alert('There are not characters with this id.');
       });
