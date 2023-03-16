@@ -1,23 +1,28 @@
-.card {
-    background: transparent;
-    border: 2px solid #344259;
-    transition: .5s;
-    transform: translateY(10px);
-    height: 70vh;
-    width: 330px;
-    margin-top: 30px;
-    margin-left: 5px;
-    border-radius: 12px;
-    padding-bottom: 5px;
-    backdrop-filter: blur(15px);
+.floating {
+   background: transparent;
+   border-radius: 20px;
+   animation-name: floating;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+   animation-timing-function: ease-in-out;
+   backdrop-filter: blur(15px);
 }
 
-.card :link {
+@keyframes floating {
+   0% { transform: translate(0, 0px);}
+   50% {transform: translate(0, 15px);}
+   100% {transform: translate(0, -0px);}
+}
+
+.floating:hover {
+   animation-duration: 0s;
+   border: 3px solid white;
+   box-shadow: none;
+   background: linear-gradient(70deg, green, blue);
+}
+
+.floating :link {
   text-decoration: wavy underline;
-}
-
-.card:hover {
-    transform: translateY(0px);
 }
 
 .containerImg {

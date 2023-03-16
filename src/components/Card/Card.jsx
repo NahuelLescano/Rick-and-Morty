@@ -27,7 +27,7 @@ export function Card({ id, name, species, image, gender,
   }, [myFavorites, id]);
 
   return (
-    <div className={Styles.card}>
+    <div className={Styles.floating}>
       <div className={Styles.containerImg}>
         <button
           className={Styles.button}
