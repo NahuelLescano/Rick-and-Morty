@@ -1,28 +1,28 @@
 .floating {
-   background: transparent;
-   border-radius: 20px;
-   animation-name: floating;
-   animation-duration: 3s;
-   animation-iteration-count: infinite;
-   animation-timing-function: ease-in-out;
-   backdrop-filter: blur(15px);
+    background: transparent;
+    border-radius: 20px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    backdrop-filter: blur(15px);
 }
 
 @keyframes floating {
-   0% { transform: translate(0, 0px);}
-   50% {transform: translate(0, 15px);}
-   100% {transform: translate(0, -0px);}
+    0% { transform: translate(0, 0px);}
+    50% {transform: translate(0, 15px);}
+    100% {transform: translate(0, -0px);}
 }
 
 .floating:hover {
-   animation-duration: 0s;
-   border: 3px solid white;
-   box-shadow: none;
-   background: linear-gradient(70deg, green, blue);
+    animation-duration: 0s;
+    border: 3px solid white;
+    box-shadow: none;
+    background: linear-gradient(70deg, green, blue);
 }
 
 .floating :link {
-  text-decoration: wavy underline;
+    text-decoration: wavy underline;
 }
 
 .containerImg {
