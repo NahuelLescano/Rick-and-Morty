@@ -31,8 +31,9 @@ export function Card({ id, name, species, image, gender,
       <div className={Styles.containerImg}>
         <button
           className={Styles.button}
-          onClick={onClose}
-        >X</button>
+          onClick={onClose}>
+          X
+        </button>
         <img src={image} alt={id} className={Styles.image} />
         {(isFav) ? (
             <button
