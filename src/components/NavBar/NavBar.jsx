@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import SearchBar from '../SearchBar/SearchBar.jsx';
 import Styles from './NavBar.module.css';
 
-export default function NavBar({ onSearch, logout }) {
+export default function NavBar({ onSearch, logout, randomCharacter }) {
   return (
     <div className={Styles.container}>
       <NavLink to='/home'
@@ -19,9 +19,14 @@ export default function NavBar({ onSearch, logout }) {
 
       <button
         className={Styles.button}
-        onClick={() => logout()}>
+        onClick={() => logout()} >
         Logout
       </button>
+      <button
+        className={Styles.button}
+        onClick={() => randomCharacter()} >
+        Random character
+      </button>
     </div>
-  )
+  );
 }
