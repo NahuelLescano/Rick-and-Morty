@@ -27,7 +27,8 @@ export default function SearchBar({ onSearch }) {
            type='submit'
            className={Styles.button}
            onClick={() => onSearch(character)}>
-           Add</button>
+           Add
+         </button>
        </div>
      </form>
    );
