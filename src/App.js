@@ -10,7 +10,6 @@ import Favorites from './components/Favorites/Favorites.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import './App.css';
 
-
 export default function App () {
   const [characters, setCharacters] = useState([]);
   const [access, setAccess] = useState(false);
@@ -42,16 +41,16 @@ export default function App () {
     // eslint-disable-next-line
   }, [access]);
 
-  const onSearch = character => {
-    fetch(`${URL}${character}`)
+  const onSearch = id => {
+    fetch(`${URL}${id}`)
       .then(response => response.json())
       .then(data => {
         if (characters.some(character => character.id === data.id))
           alert('This character has already been added.');
         else if(data.name)
           setCharacters([data, ...characters]);
-        //else
-        //  alert('There are not characters with this id.');
+        else
+          alert('There are not characters with this id.');
       });
   };
 
@@ -59,9 +58,19 @@ export default function App () {
     setCharacters(characters.filter(character => character.id !== id));
   }
 
+  const randomCharacter = () => {
+    const randomId = Math.floor((Math.random() * 826) + 1);
+    console.log(`Random character number: ${randomId}`);
+    fetch(`${URL}${randomId}`)
+      .then(response => response.json())
+      .then(data => {
+        if(data.name) setCharacters([data, ...characters])
+      })
+  }
+
   return (
     <div className='App'>
-      {location.pathname !== '/' && <NavBar onSearch={onSearch} logout={logout} />}
+      {location.pathname !== '/' && <NavBar onSearch={onSearch} logout={logout} randomCharacter={randomCharacter} />}
       <Routes>
         <Route
           path='/'
@@ -90,13 +99,14 @@ export default function App () {
           element={<Detail />}
         />
 
+        {/*https://stackabuse.com/redirects-in-react-router/*/}
         <Route
           path='/ErrorPage'
           element={<ErrorPage />}
         />
 
         <Route
-          path='/redirect'
+          path='/ErrorPage'
           element={<Navigate to='/ErrorPage'/>}
         />
       </Routes>
