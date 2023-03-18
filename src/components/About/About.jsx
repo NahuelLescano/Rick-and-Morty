@@ -7,9 +7,9 @@ export default function About() {
       <div className={Styles.container}>
         <h1>Welcome to my Rick and Morty web page!</h1>
         <img
-          className={Styles.image}
-          src={image}
-          alt='profile' />
+        className={Styles.image}
+        src={image}
+        alt='profile' />
         <p>
           I'm full-stack student, and this is a proyect to practice what I learnt.
         </p>
@@ -17,14 +17,9 @@ export default function About() {
           I've also studied computer engineering.
         </p>
         <p>Created by: Nahuel</p>
-        <div>
-          <ion-icon name="logo-linkedin"></ion-icon>
-          <a href='https://www.linkedin.com/in/nahuel-lescano-906a2618b/'>Linkedin</a>
-          <ion-icon name="logo-github"></ion-icon>
-          <a href='https://github.com/NahuelLescano'>My github</a>
-          <ion-icon name="logo-github"></ion-icon>
-          <a href='https://github.com/NahuelLescano/Rick-and-Morty'>Repo from this project!</a>
-        </div>
+        <a href='https://www.linkedin.com/in/nahuel-lescano-906a2618b/'>Linkedin</a>
+        <a href='https://github.com/NahuelLescano'>My github</a>
+        <a href='https://github.com/NahuelLescano/Rick-and-Morty'>Repo from this project!</a>
       </div>
     </div>
   );
