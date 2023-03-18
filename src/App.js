@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Routes, Route, useLocation, useNavigate, Navigate } from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 
 import Cards from './components/Cards/Cards.jsx';
 import NavBar from './components/NavBar/NavBar.jsx'
@@ -7,7 +7,6 @@ import About from './components/About/About.jsx';
 import Detail from './components/Detail/Detail.jsx';
 import Form from './components/Form/Form.jsx';
 import Favorites from './components/Favorites/Favorites.jsx';
-import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import './App.css';
 
 export default function App () {
@@ -97,17 +96,6 @@ export default function App () {
         <Route
           path='/detail/:detailId'
           element={<Detail />}
-        />
-
-        {/*https://stackabuse.com/redirects-in-react-router/*/}
-        <Route
-          path='/ErrorPage'
-          element={<ErrorPage />}
-        />
-
-        <Route
-          path='/ErrorPage'
-          element={<Navigate to='/ErrorPage'/>}
         />
       </Routes>
    </div>
