@@ -23,7 +23,7 @@
 }
 
 .button {
-    width: 4%;
+    width: 4.5%;
     margin-left: 20%;
     border: none;
     outline: none;
@@ -42,13 +42,13 @@
 }
 
 .active {
-    color: purple;
+    color: brown;
     font-weight: bold;
     transition: .2s;
 }
 
 .active:hover {
-    text-decoration: underline;
+    text-decoration: wavy underline;
 }
 
 .disable {
@@ -56,5 +56,5 @@
 }
 
 .disable:hover {
-    background-color: #939393;
+    background-color: #536878;
 }

@@ -21,13 +21,6 @@ body {
   background-position: center;
 }
 
-#root {
-  margin: 0;
-  padding: 0;
-  width: 99%;
-  height: 97vh;
-}
-
 code {
   font-family: Rick-and-Morty, source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

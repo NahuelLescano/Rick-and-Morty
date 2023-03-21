@@ -48,6 +48,7 @@ export default function Form({ login }) {
                   id='username'
                   name='username'
                   type='email'
+                  autoComplete='off'
                   value={userData.username}
                   onChange={handleInputChange}
                   className={errors.username && Styles.warning}
@@ -64,6 +65,7 @@ export default function Form({ login }) {
                   id='password'
                   name='password'
                   type='password'
+                  autoComplete='off'
                   value={userData.password}
                   onChange={handleInputChange}
                   className={errors.password && Styles.warning}

@@ -22,6 +22,7 @@ export default function NavBar({ onSearch, logout, randomCharacter }) {
         onClick={() => logout()} >
         Logout
       </button>
+
       <button
         className={Styles.button}
         onClick={() => randomCharacter()} >
