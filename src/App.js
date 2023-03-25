@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
 import Cards from './components/Cards/Cards.jsx';
 import NavBar from './components/NavBar/NavBar.jsx'
 import About from './components/About/About.jsx';
@@ -40,32 +40,34 @@ export default function App () {
     // eslint-disable-next-line
   }, [access]);
 
-  const onSearch = id => {
-    fetch(`${URL}${id}`)
-      .then(response => response.json())
-      .then(data => {
-        if (characters.some(character => character.id === data.id))
-          alert('This character has already been added.');
-        else if(data.name)
-          setCharacters([data, ...characters]);
-        else
-          alert('There are not characters with this id.');
-      });
+  //https://stackabuse.com/making-asynchronous-http-requests-in-javascript-with-axios/
+  const onSearch = async id => {
+    try {
+      const { data } = await axios.get(`${URL}${id}`);
+      if (characters.some(character => character.id === data.id))
+        alert('This character has already been added.');
+      else if(data.name)
+        setCharacters([data, ...characters]);
+      else
+        alert('There are not characters with this id.');
+    } catch(error) {
+      console.log(`Error: ${error}`);
+    }
   };
 
   const onClose = id => {
     setCharacters(characters.filter(character => character.id !== id));
-  }
+  };
 
-  const randomCharacter = () => {
+  const randomCharacter = async () => {
     const randomId = Math.floor((Math.random() * 826) + 1);
-    console.log(`Random character number: ${randomId}`);
-    fetch(`${URL}${randomId}`)
-      .then(response => response.json())
-      .then(data => {
-        if(data.name) setCharacters([data, ...characters])
-      })
-  }
+    try {
+      const { data } = await axios.get(`${URL}${randomId}`);
+      if(data.name) setCharacters([data, ...characters])
+    } catch(error) {
+      console.log(`Error: ${error}`);
+    }
+  };
 
   return (
     <div className='App'>
