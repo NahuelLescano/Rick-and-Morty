@@ -49,6 +49,7 @@ export default function Form({ login }) {
                   name='username'
                   type='email'
                   autoComplete='off'
+                  placeholder='Enter your email.'
                   value={userData.username}
                   onChange={handleInputChange}
                   className={errors.username && Styles.warning}
@@ -66,6 +67,7 @@ export default function Form({ login }) {
                   name='password'
                   type='password'
                   autoComplete='off'
+                  placeholder='Enter your password.'
                   value={userData.password}
                   onChange={handleInputChange}
                   className={errors.password && Styles.warning}
