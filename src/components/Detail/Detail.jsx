@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
 import Styles from './Detail.module.css';
 
 const URL = 'https://rickandmortyapi.com/api/character/';
@@ -10,13 +11,15 @@ export default function Detail() {
   const [character, setCharacter] = useState({});
 
   useEffect(() => {
-    fetch(`${URL}${detailId}`)
-      .then(response => response.json())
-      .then(char => {
-        (char.name) ? setCharacter(char) : alert('There is no character with this id.');
-      })
-      .catch(error => console.log(`${error}. There is no character with this id.`));
-    return setCharacter({});
+    const fetchData = async () => {
+      try {
+        const { data } = await axios.get(`${URL}${detailId}`);
+        (data.name) ? setCharacter(data) : alert('There is no character with this id.');
+      } catch(error) {
+        console.log(`Error: ${error}. There is no character with this id.`);
+      }
+    }
+    fetchData();
   }, [detailId]);
 
   return (
@@ -28,10 +31,13 @@ export default function Detail() {
            alt={character.id}
            className={Styles.image}
          />
+
          <button
            onClick={() => navigate('/home')}
-           className={Styles.button}
-         >Back</button>
+           className={Styles.button}>
+           Back
+         </button>
+
          <h1>Name: {character.name}</h1>
          <h2>Status: {character.status}</h2>
          <h2>Species: {character.species}</h2>
