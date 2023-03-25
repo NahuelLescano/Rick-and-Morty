@@ -23,6 +23,7 @@ export default function SearchBar({ onSearch }) {
            type='search'
            placeholder='Search for a character'
          />
+
          <button
            type='submit'
            className={Styles.button}
