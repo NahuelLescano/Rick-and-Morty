@@ -1,0 +1,40 @@
+#+title: Rick and Morty
+#+author: Nahuel Lescano
+
+* Rick and Morty project
+Hi! I'm Nahuel and I'm currently studying full-stack web development at soy Henry. This is my project using React and React Redux.
+
+** Installation
+To install the app, clone the repository and run the following command in your terminal:
+
+#+begin_src bash
+$ npm install
+#+end_src
+
+To run the app, use the following command:
+#+begin_src bash
+$ npm start
+#+end_src
+
+** Project Creation
+I created this project using Create React App, which is a popular tool for quickly setting up a React project. For more information on Create React App, check out [[https://create-react-app.dev/docs/getting-started/check][the official documentation.]]
+
+** Styling
+I use component.module.css to give styles to all my components. For inspiration, I watched this [[https://www.youtube.com/watch?v=1H-vSHVOxoU&t=187s ][YouTube video]] on how to style a login component and other components as well.
+
+** API
+I used the [[https://rickandmortyapi.com/][Rick and Morty API]] to bring in all the data and render it in the app.
+
+** Routing
+I used [[https://reactrouter.com/en/main][React Router DOM]] to connect different components and create routes for the app.
+
+** Form
+The login component is not a real login system, but rather a simulated one. The email to use is nahuel@gmail.com and the password is nahuel1234. I use a regular expression to verify that the email and password meet certain requirements. I also used [[https://ionic.io/ionicons][ionicons]] for the icons in this component.
+
+** React-Redux
+I used React-Redux "the old way" to understand what's happening behind the scenes. As a result, you'll see *mapState* and *mapDispatch* being used to connect to the component.
+
+** Hooks
+Finally, I used [[https://legacy.reactjs.org/docs/hooks-intro.html][React Hooks]] like /useState/ and /useDispatch/ to implement different actions in the app.
+
+Special thanks to FacundoAylan for helping me with the styling and to my teachers at Henry. If you have any feedback or suggestions on how I can improve this project, feel free to let me know!
