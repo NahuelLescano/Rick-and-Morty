@@ -3,7 +3,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Styles from './Detail.module.css';
 
-const URL = 'https://rickandmortyapi.com/api/character/';
+// const URL = 'https://rickandmortyapi.com/api/character/';
+const URL = 'http://localhost:3001/rickandmorty/character/';
 
 export default function Detail() {
   const { detailId } = useParams();

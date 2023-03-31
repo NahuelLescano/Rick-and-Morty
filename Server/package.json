@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "This is a simple server for my rick and morty project.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "nodemon ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NahuelLescano/Rick-and-Morty.git#main"
+  },
+  "author": "Nahuel Lescano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NahuelLescano/Rick-and-Morty/issues"
+  },
+  "homepage": "https://github.com/NahuelLescano/Rick-and-Morty/tree/main#readme",
+  "dependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

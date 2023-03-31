@@ -16,7 +16,8 @@ export default function App () {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const URL = 'https://rickandmortyapi.com/api/character/';
+  //const URL = 'https://rickandmortyapi.com/api/character/';
+  const URL = 'http://localhost:3001/rickandmorty/character/';
   const username = 'nahuel@gmail.com';
   const password = 'nahuel1234';
 
@@ -60,7 +61,8 @@ export default function App () {
   };
 
   const randomCharacter = async () => {
-    const randomId = Math.floor((Math.random() * 826) + 1);
+    // const randomId = Math.floor((Math.random() * 826) + 1);
+    const randomId = Math.floor((Math.random() * 5) + 1);
     try {
       const { data } = await axios.get(`${URL}${randomId}`);
       if(data.name) setCharacters([data, ...characters])
