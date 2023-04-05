@@ -1,0 +1,9 @@
+#+title: Rick and Morty
+#+author: Nahuel Lescano
+
+* Rick and Morty
+Hi! I'm studying full-stack web development at Soy Henry.
+This project is divided in two sections. One part is the front-end using React, Redux, and Hooks. The another part is the server side, for now it does not have much. This is a project to practice what I'm learning.
+
+* Special thanks.
+Special thanks to [[https://github.com/FacundoAylan][FacundoAylan]] for helping me with the styling and to my teachers at Henry. If you have any feedback or suggestions on how I can improve this project, feel free to let me know!
