@@ -37,3 +37,4 @@ I used React-Redux "the old way" to understand what's happening behind the scene
 ** Hooks
 Finally, I used [[https://legacy.reactjs.org/docs/hooks-intro.html][React Hooks]] like /useState/ and /useDispatch/ to implement different actions in the app.
 
+Special thanks to FacundoAylan for helping me with the styling and to my teachers at Henry. If you have any feedback or suggestions on how I can improve this project, feel free to let me know!
