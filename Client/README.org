@@ -2,8 +2,6 @@
 #+author: Nahuel Lescano
 
 * Rick and Morty project
-Hi! I'm Nahuel and I'm currently studying full-stack web development at soy Henry. This is my project using React and React Redux.
-
 ** Installation
 To install the app, clone the repository and run the following command in your terminal:
 
