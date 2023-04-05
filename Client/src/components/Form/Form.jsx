@@ -26,13 +26,13 @@ export default function Form({ login }) {
   };
 
   const handleSubmit = () => {
-    if (Object.entries(errors).length === 0) {
+    if (!errors.username && !errors.password) {
       login(userData);
       setErrors(Validation({
         username: '',
         password: '',
       }));
-    } else alert('Error');
+    }
   }
 
   return (
