@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
+
 import Styles from './Detail.module.css';
 
 // const URL = 'https://rickandmortyapi.com/api/character/';

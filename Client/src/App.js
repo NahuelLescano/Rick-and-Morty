@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+
 import Cards from './components/Cards/Cards.jsx';
 import NavBar from './components/NavBar/NavBar.jsx'
 import About from './components/About/About.jsx';
@@ -52,7 +53,7 @@ export default function App () {
       else
         alert('There are not characters with this id.');
     } catch(error) {
-      console.log(`Error: ${error}`);
+      console.error(error);
     }
   };
 
@@ -67,7 +68,7 @@ export default function App () {
       const { data } = await axios.get(`${URL}${randomId}`);
       if(data.name) setCharacters([data, ...characters])
     } catch(error) {
-      console.log(`Error: ${error}`);
+      console.error(`Error: ${error}`);
     }
   };
 
