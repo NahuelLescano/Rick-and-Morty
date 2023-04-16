@@ -49,7 +49,8 @@ export default function Favorites() {
       {(myFavorites.length !== 0) ? myFavorites.map(fav => (
       <div
         className={Styles.container}
-        key={fav.id}>
+        key={fav.id}
+      >
         <img
           src={fav.image}
           alt={fav.id}
