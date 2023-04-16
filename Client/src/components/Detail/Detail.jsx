@@ -18,7 +18,7 @@ export default function Detail() {
         const { data } = await axios.get(`${URL}${detailId}`);
         (data.name) ? setCharacter(data) : alert('There is no character with this id.');
       } catch(error) {
-        console.log(`Error: ${error}. There is no character with this id.`);
+        console.log(`${error}.\nThere is no character with this id.`);
       }
     }
     fetchData();
