@@ -68,7 +68,7 @@ export default function App () {
       const { data } = await axios.get(`${URL}${randomId}`);
       if(data.name) setCharacters([data, ...characters])
     } catch(error) {
-      console.error(`Error: ${error}`);
+      console.error(error);
     }
   };
 
