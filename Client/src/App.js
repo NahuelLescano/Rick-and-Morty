@@ -19,14 +19,16 @@ export default function App () {
 
   //const URL = 'https://rickandmortyapi.com/api/character/';
   const URL = 'http://localhost:3001/rickandmorty/character/';
-  const username = 'nahuel@gmail.com';
-  const password = 'nahuel1234';
 
-  const login = userData => {
-    if (userData.username === username &&
-        userData.password === password) {
-      setAccess(true);
-      navigate('/home');
+  const login = async userData => {
+    const { email, password } = userData;
+    const URL = 'http://localhost:3001/rickandmorty/login/';
+    try {
+      const { data } = await axios(`${URL}?email=${email}&password=${password}`);
+      setAccess(data);
+      data.access && navigate('/home');
+    } catch (error) {
+      console.error(error);
     }
   }
 
