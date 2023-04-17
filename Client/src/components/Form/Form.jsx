@@ -53,7 +53,8 @@ export default function Form({ login }) {
                   value={userData.username}
                   onChange={handleInputChange}
                   className={errors.username && Styles.warning}
-                  required />
+                  required
+                />
                 <p className={Styles.danger}>{errors.username}</p>
             </div>
           </div>
@@ -78,7 +79,8 @@ export default function Form({ login }) {
 
           <button
             type='submit'
-            className={Styles.button} >
+            className={Styles.button}
+          >
             Login
           </button>
           </form>
