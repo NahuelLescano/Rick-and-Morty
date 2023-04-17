@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 import {
   ADD_FAV,
   REMOVE_FAV,
@@ -5,17 +7,25 @@ import {
   ORDER } from './types';
 
 export const addFav = character => {
-  return {
-    type: ADD_FAV,
-    payload: character,
-  };
+  const endpoint = 'http://localhost:3001/rickandmorty/fav';
+  return async dispatch => {
+    const { data } = await axios.post(endpoint, character);
+    return dispatch({
+      type: ADD_FAV,
+      payload: data,
+    });
+  }
 };
 
 export const removeFav = id => {
-  return {
-    type: REMOVE_FAV,
-    payload: id,
-  };
+  const endpoint = `http://localhost:3001/rickandmorty/fav/${id}`;
+  return async dispatch => {
+    const { data } = await axios.delete(endpoint);
+    return dispatch({
+      type: REMOVE_FAV,
+      payload: data,
+    });
+  }
 };
 
 export const filterCards = gender => {
