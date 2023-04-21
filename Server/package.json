@@ -7,8 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "start": "nodemon ./src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/index.js",
+    "test": "jest --detectOpenHandles --watch",
+    "dev": "nodemon ./src/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,9 @@
     "axios": "^1.3.5",
     "express": "^4.18.2",
     "nodemon": "^2.0.22"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3"
   }
 }
