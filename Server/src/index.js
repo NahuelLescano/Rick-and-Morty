@@ -2,6 +2,4 @@ const server = require('./app');
 
 const PORT = '3001';
 
-server.listen(PORT, () => console.log(`Server raised in port: ${PORT}`));
-
-module.exports = server;
+server.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
