@@ -20,10 +20,10 @@ export default function App () {
   //const URL = 'https://rickandmortyapi.com/api/character/';
   const URL = 'http://localhost:3001/rickandmorty/character/';
 
-  const login = async ({ email, password }) => {
+  const login = async ({ username, password }) => {
     const URL = 'http://localhost:3001/rickandmorty/login/';
     try {
-      const { data } = await axios(`${URL}?email=${email}&password=${password}`);
+      const { data } = await axios(`${URL}?email=${username}&password=${password}`);
       setAccess(true);
       data.access && navigate('/home');
     } catch (error) {
@@ -63,8 +63,8 @@ export default function App () {
   };
 
   const randomCharacter = async () => {
-    // const randomId = Math.floor((Math.random() * 826) + 1);
-    const randomId = Math.floor((Math.random() * 5) + 1);
+    const randomId = Math.floor((Math.random() * 826) + 1);
+    // const randomId = Math.floor((Math.random() * 5) + 1);
     try {
       const { data } = await axios.get(`${URL}${randomId}`);
       if(data.name) setCharacters([data, ...characters])
