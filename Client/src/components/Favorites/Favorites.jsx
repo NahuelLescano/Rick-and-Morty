@@ -56,6 +56,7 @@ export default function Favorites() {
           alt={fav.id}
           className={Styles.img}
         />
+
         <h2>name: {fav.name}</h2>
         <h3>Species: {fav.species}</h3>
         <h3>Gender: {fav.gender}</h3>
