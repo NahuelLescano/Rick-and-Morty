@@ -7,7 +7,6 @@ import {
   ORDER } from './types';
 
 export const addFav = character => {
-  console.log(character);
   const endpoint = 'http://localhost:3001/rickandmorty/fav';
   return async dispatch => {
     const { data } = await axios.post(endpoint, character);
