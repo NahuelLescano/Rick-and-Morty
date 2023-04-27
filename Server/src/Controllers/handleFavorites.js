@@ -4,7 +4,7 @@ const postFav = (request, response) => {
   const { character } = request.body;
 
   try {
-    favorites = [...favorites, character];
+    favorites.push(character);
     response.status(200).json(favorites);
   } catch(error) {
     response.status(500).json({ error: error.message });
