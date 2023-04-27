@@ -25,7 +25,8 @@ export default function Form({ login }) {
     }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = event => {
+    event.preventDefault();
     if (!errors.username && !errors.password) {
       login(userData);
       setErrors(Validation({
