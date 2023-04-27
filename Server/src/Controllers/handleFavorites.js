@@ -1,7 +1,7 @@
 let favorites = [];
 
 const postFav = (request, response) => {
-  const { character } = request.body;
+  const character = request.body;
 
   try {
     favorites.push(character);
@@ -12,10 +12,11 @@ const postFav = (request, response) => {
 }
 
 const deleteFav = (request, response) => {
-  const { id } = parseInt(request.params);
+  let { id } = request.params;
+  id = parseInt(id);
 
   try {
-    const filteredFav = favorites.filter(fav => fav.id === id);
+    const filteredFav = favorites.filter(fav => fav.id !== id);
     response.status(200).json(filteredFav);
   } catch(error) {
     response.status(500).json({ error: error.message });
