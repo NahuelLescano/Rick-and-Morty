@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 const router = require('./Routes/index');
 const server = express();
 
