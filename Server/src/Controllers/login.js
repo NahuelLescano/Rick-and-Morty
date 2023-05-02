@@ -1,4 +1,3 @@
-// const users = require('../Utils/users');
 const { User } = require('../Model/User');
 
 const login = async (req, res) => {
