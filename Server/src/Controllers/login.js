@@ -1,4 +1,4 @@
-const { User } = require('../Model/User');
+const { User } = require('../db');
 
 const login = async (req, res) => {
   const { email, password } = req.query;
@@ -8,25 +8,25 @@ const login = async (req, res) => {
     return res.status(400).json({ message: 'Please provide email and password' });
   }
 
-  const existingUser = await User.findOne({
-    where: { email },
-  });
-  if (!existingUser) {
-    return res.status(404).json({ message: 'User not found' });
-  }
+    try {
+      const existingUser = await User.findOne({
+        where: { email },
+      });
+      if (!existingUser) {
+        return res.status(404).json({ message: 'User not found' });
+      }
 
-  const existingUserEmail = await User.findOne({
-    where : { password },
-  });
-  if (!existingUserEmail) {
-    return res.status(404).json({ message: 'Incorrect password' });
-  }
+      const correctPassword = await User.findOne({
+        where: { password },
+      });
+      if (!correctPassword) {
+        return res.status(403).json({ message: 'Incorrect password' });
+      }
 
-  try {
-    res.status(200).json({ access: true });
-  } catch({ message }) {
-    res.status(500).json({ message });
-  }
+      res.status(200).json({ access: true });
+    } catch ({ message }) {
+      res.status(500).json({ message });
+    }
 }
 
 module.exports = login;
