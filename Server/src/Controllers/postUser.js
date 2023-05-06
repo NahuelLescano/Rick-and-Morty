@@ -8,14 +8,11 @@ const postUser = async (req, res) => {
     }
 
     try {
-        const [user, created] = await User.findOrCreate({
-            where: { email },
-            defaults: { email, password }
+        const [user] = await User.findOrCreate({
+            where: { email, password },
         });
 
-        if (created) {
-            res.status(201).json(user);
-        }
+        res.status(201).json(user);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
