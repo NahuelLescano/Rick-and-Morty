@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "This is a simple server for my rick and morty project.",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "directories": {
     "test": "test"
   },
