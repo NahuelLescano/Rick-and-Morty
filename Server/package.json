@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/NahuelLescano/Rick-and-Morty/tree/main#readme",
   "dependencies": {
+    "@vercel/postgres": "^0.4.1",
     "axios": "^1.3.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
